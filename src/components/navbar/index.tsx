@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
+import ThemeToggle from "../themeToggle";
 
 const Navbar = () => {
   const navItems = [
@@ -75,13 +76,14 @@ const Navbar = () => {
                   className="absolute inset-0 h-full w-full rounded-md bg-neutral-100 dark:bg-neutral-800"
                 />
               )}
-              <span className="text-primary dark:text-primary-dark relative z-10">
+              <span className="text-primary dark:text-white relative z-10">
                 {item.name}
               </span>
             </Link>
           ))}
-          <Image src="/me.jpg" alt="Avatar" width={100} height={100}/>
+          <ThemeToggle/>
         </div>
+
       </motion.nav>
     </Container>
   );

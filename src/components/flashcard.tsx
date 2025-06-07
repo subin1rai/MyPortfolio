@@ -10,16 +10,16 @@ const Flashcard = () => {
       <div className="flex flex-row gap-4 justify-center items-center">
         {/* Left column */}
         <div className="flex flex-col items-center  space-y-4">
-          <div className="rounded-xl bg-neutral-100 p-4 dark:bg-neutral-500">
+          <div className="rounded-xl bg-[#f4f4f5] p-6 dark:bg-[#27272a]">
               <Image
                 src="/reactnative.png"
                 alt="React Native"
-                className="h-15 w-15"
+                className="h-10 w-10"
                 height={60}
                 width={60}
               />
           </div>
-          <div className="rounded-xl bg-neutral-100 p-4 dark:bg-neutral-500">
+          <div className="rounded-xl bg-[#f4f4f5] p-6 dark:bg-[#27272a]">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{
@@ -27,7 +27,7 @@ const Flashcard = () => {
                 ease: "linear",
                 repeat: Infinity,
               }}
-              className="h-15 w-15"
+              className="h-10 w-10"
             >
               <Image
                 src="/react.png"
@@ -50,21 +50,20 @@ const Flashcard = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="rounded-xl bg-neutral-100 p-4 dark:bg-neutral-500 "
-          >
+            className="rounded-xl bg-[#f4f4f5] p-6 dark:bg-[#27272a]"> 
             <Image
               src="/node.webp"
               alt="Node.js"
-              className="h-15 w-15"
+              className="h-10 w-10"
               height={60}
               width={60}
             />
           </motion.div>
-          <div className="rounded-xl bg-neutral-100 p-4 dark:bg-neutral-500">
+          <div className="rounded-xl bg-[#f4f4f5] p-6 dark:bg-[#27272a]">
             <Image
               src="/mongodb.png"
               alt="MongoDB"
-              className="h-15 w-15"
+              className="h-10 w-10"
               height={60}
               width={60}
             />

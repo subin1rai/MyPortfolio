@@ -32,8 +32,8 @@ const Projects = () => {
 
   return (
     <div className="py-10">
-      <h1 className="text-primary text-3xl font-bold">Project</h1>
-      <p className="text-secondary pt-4 text-sm md:text-sm">
+      <h1 className="text-primary dark:text-white text-3xl font-bold">Project</h1>
+      <p className="text-secondary dark:text-neutral-100 pt-4 text-sm md:text-sm">
         Im a software engineer with a passion for building scalable and
         efficient system. I specialize in backend development, cloud
         infrastructure, and DevOps.

@@ -45,7 +45,7 @@
 }
 
 @dark{
-  --color-primary: var(--color-neutral-100);
+  --color-primary: var(--color-white);
   --color-secondary: var(--color-neutral-300);
 }
 
