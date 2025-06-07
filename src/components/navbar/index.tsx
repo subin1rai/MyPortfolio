@@ -80,6 +80,7 @@ const Navbar = () => {
               </span>
             </Link>
           ))}
+          <Image src="/me.jpg" alt="Avatar" width={100} height={100}/>
         </div>
       </motion.nav>
     </Container>

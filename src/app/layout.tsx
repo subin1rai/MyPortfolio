@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased bg-neutral-100 dark:bg-neutral-700`}
+        className={`${inter.className} antialiased bg-white dark:bg-neutral-700`}
       >
         
         <Navbar/>
