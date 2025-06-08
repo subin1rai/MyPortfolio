@@ -7,13 +7,13 @@ import { useState } from "react";
 import ThemeToggle from "../themeToggle";
 
 const Navbar = () => {
-  const navItems = [
-    // { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
-    { name: "Awards", href: "/awards" },
-  ];
+const navItems = [
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+  { name: "Awards", href: "#awards" },
+];
+
 
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [hovered, setHovered] = useState<number | null>(null);

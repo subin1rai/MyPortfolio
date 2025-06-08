@@ -5,6 +5,7 @@ import Flashcard from "@/components/flashcard";
 import { Footer } from "@/components/footer";
 import Media from "@/components/media";
 import Projects from "@/components/projects";
+import Skill from "@/components/skill";
 import { TextHover } from "@/components/textHover";
 import { Spotlight } from "@/components/ui/spotlight-new";
 
@@ -13,43 +14,55 @@ import { MapPinIcon } from "lucide-react";
 export default function Home() {
   return (
     <div className="flex min-h-screen max-w-screen items-start justify-start">
-        {/* Spotlight with fixed positioning */}
-      <div className="fixed inset-0 w-screen h-screen pointer-events-none">
-        <div className="relative w-full h-full max-w-6xl mx-auto">
-          <Spotlight width={300}/>
+      {/* Spotlight with fixed positioning */}
+      <div className="pointer-events-none fixed inset-0 h-screen w-screen">
+        <div className="relative mx-auto h-full w-full max-w-6xl">
+          <Spotlight width={300} />
         </div>
       </div>
       <Container className="min-h-screen px-10 pt-20 pb-10 md:pt-36 md:pb-10">
-        <div className="flex flex-col md:flex-row md:justify-between justify-center items-center gap-10">
+        <div
+          id="about"
+          className="flex flex-col items-center justify-center gap-10 md:flex-row md:justify-between"
+        >
           <div>
-            <h1 className="text-primary dark:text-white text-2xl font-bold tracking-tight md:text-4xl text-center md:text-start">
+            <h1 className="text-primary text-center text-2xl font-bold tracking-tight md:text-start md:text-4xl dark:text-white">
               Subin Rai
             </h1>
-            <p className="text-secondary dark:text-secondary text-xl font-semibold tracking-tight md:text-2xl text-center md:text-start">
+            <p className="text-secondary dark:text-secondary text-center text-xl font-semibold tracking-tight md:text-start md:text-2xl">
               FullStack Developer
             </p>
-            <div className="flex flex-row my-2 gap-2 items-center justify-center md:items-start md:justify-start">
-              <MapPinIcon size={20} className="text-secondary dark:text-secondary"/>
-              <p className="text-secondary dark:text-secondary text-sm font-semibold tracking-tight md:text-sm text-center md:text-start">Dharan, Sunsari</p>
+            <div className="my-2 flex flex-row items-center justify-center gap-2 md:items-start md:justify-start">
+              <MapPinIcon
+                size={20}
+                className="text-secondary dark:text-secondary"
+              />
+              <p className="text-secondary dark:text-secondary text-center text-sm font-semibold tracking-tight md:text-start md:text-sm">
+                Dharan, Sunsari
+              </p>
             </div>
-            <p className="text-secondary dark:text-neutral-100 pt-4 text-sm md:text-sm max-w-7xl text-center md:text-start">
+            <p className="text-secondary max-w-7xl pt-4 text-center text-sm md:text-start md:text-sm dark:text-neutral-100">
               A goal-oriented software developer with experience in building web
               applications using modern technologies like React, Next.js, and
               more. Seeking to leverage my technical skills to deliver
               exceptional user experiences.
             </p>
-            <Media/>
+            <Media />
           </div>
-         <Flashcard/>
+          <Flashcard />
         </div>
-        <div >
-
+        <div id="experiences">
+        <Experience />
         </div>
-        <Experience/>
-        <Projects />
-        <Achievement/>
-        <Footer/>
-        <TextHover/>
+        <Skill />
+        <div id="projects" className="scroll-mt-24">
+          <Projects />
+        </div>
+        <div id="awards">
+          <Achievement />
+        </div>
+        <Footer />
+        <TextHover />
       </Container>
     </div>
   );

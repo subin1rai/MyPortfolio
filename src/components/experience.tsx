@@ -9,7 +9,7 @@ interface ExperienceItem {
   period: string;
   company: string;
   position: string;
-  description: string;
+  description: string[]; // Changed to array
   logo: string;
   logoAlt: string;
 }
@@ -18,17 +18,20 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState<"work" | "studies">("work");
 
   const workExperience: ExperienceItem[] = [
-    
     {
       id: "1",
       period: "Jun 2024 - Sep 2024",
       company: "Itahari International College",
       position: "Teaching Assistant & FullStack Development - Internship",
-      description:
-        "Mobile Development ( Parque D.Carlos I App - Course Final Project [Grade:20/20] ); Web Development; Functional testing some company's apps (Lota Digital, Caldas da Rainha - City Guide).",
+      description: [
+        "Contributed to the development of a Faculty Resource Management System using Node.js, React, Prisma ORM, and MySQL.",
+        "Implemented dashboards, authentication, and role-based access, reducing manual workload by 40%.",
+        "Mentored students on full-stack concepts, debugging, and applying best practices.",
+        "Collaborated in a 4-member agile team to build scalable internal tools.",
+      ],
       logo: "/iic.png",
       logoAlt: "iic Logo",
-    }
+    },
   ];
 
   const studiesExperience: ExperienceItem[] = [
@@ -37,8 +40,10 @@ const Experience = () => {
       period: "2023 - 2025",
       company: "Itahari International College",
       position: "BSc (Hons) in Computing",
-      description:
+      description: [
         "Focused on software development, web technologies, and mobile application development.",
+        "Engaged in project-based learning to strengthen problem-solving and programming skills.",
+      ],
       logo: "/iic.png",
       logoAlt: "University Logo",
     },
@@ -47,8 +52,7 @@ const Experience = () => {
       period: "2021 - 2022",
       company: "Aims Academy College",
       position: "School Leaving Certificate (SLC)",
-      description:
-        "",
+      description: ["Completed high school education with a focus on science and mathematics."],
       logo: "/aims.png",
       logoAlt: "Aims Logo",
     },
@@ -58,7 +62,7 @@ const Experience = () => {
     activeTab === "work" ? workExperience : studiesExperience;
 
   return (
-    <Container className="  text-white md:pt-44 pt-36  dark:bg-black">
+    <Container className="text-white md:pt-44 pt-36 dark:bg-black">
       <div className="mx-auto max-w-6xl">
         {/* Title */}
         <h1 className="text-primary text-3xl font-bold dark:text-white">
@@ -126,9 +130,11 @@ const Experience = () => {
                     {item.position}
                   </div>
 
-                  <p className="text-secondary  leading-relaxed">
-                    {item.description}
-                  </p>
+                  <ul className="list-disc pl-5 space-y-1 text-secondary leading-relaxed">
+                    {item.description.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}

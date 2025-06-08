@@ -4,7 +4,6 @@ import React from "react";
 import { PinContainer } from "./ui/3d-pin";
 import { motion } from "framer-motion"; // ✅ Correct import
 
-
 // Optional: add logo image fallback
 const techIcons: Record<string, React.ReactNode> = {
   "React.js": (
@@ -25,6 +24,24 @@ const techIcons: Record<string, React.ReactNode> = {
       className="brightness-0 invert-0 filter"
     />
   ),
+  "JavaScript": (
+    <Image
+      src="/js.png"
+      alt="React Native"
+      width={16}
+      height={16}
+     
+    />
+  ),
+  "TypeScript": (
+    <Image
+    src="/ts.png"
+      alt="TypeScript"
+      width={16}
+      height={16}
+     
+    />
+  ),
   "Tailwind CSS": (
     <Image
       src="/tailwind.png"
@@ -35,7 +52,15 @@ const techIcons: Record<string, React.ReactNode> = {
     />
   ),
 
-  PostgreSQL:   <Image src="/post.png" alt="React Native" width={16} height={16}  className="invert-0 filter brightness-50"/>,
+  PostgreSQL: (
+    <Image
+      src="/post.png"
+      alt="React Native"
+      width={16}
+      height={16}
+      className="brightness-50 invert-0 filter"
+    />
+  ),
   MySql: (
     <Image
       src="/mysql.png"
@@ -46,9 +71,34 @@ const techIcons: Record<string, React.ReactNode> = {
     />
   ),
 
-  "Node.js":(    <Image src="/node.webp" alt="React Native" width={16} height={16}   className="invert-0 filter brightness-0"/>),
+  "Node.js": (
+    <Image
+      src="/node.webp"
+      alt="React Native"
+      width={16}
+      height={16}
+      className="brightness-0 invert-0 filter"
+    />
+  ),
 
-  "Express.js": (    <Image src="/express.png" alt="React Native" width={16} height={16}   className="invert-0 filter brightness-50"/>),
+  "Express.js": (
+    <Image
+      src="/express.png"
+      alt="React Native"
+      width={16}
+      height={16}
+      className="brightness-50 invert-0 filter"
+    />
+  ),
+  "Next.js": (
+    <Image
+      src="/next.svg"
+      alt="React Native"
+      width={16}
+      height={16}
+      // className="brightness-50 invert-0 filter"
+    />
+  ),
 
   Prisma: (
     <Image
@@ -59,9 +109,25 @@ const techIcons: Record<string, React.ReactNode> = {
       className="brightness-0 invert-0 filter"
     />
   ),
-  Zustand: (    <Image src="/zustand.png" alt="React Native" width={16} height={16}   className=""/>),
+  Zustand: (
+    <Image
+      src="/zustand.png"
+      alt="React Native"
+      width={16}
+      height={16}
+      className=""
+    />
+  ),
 
-  "ASP.NET": (    <Image src="/net.png" alt="React Native" width={16} height={16}  className="invert-0 filter brightness-50"/>),
+  "ASP.NET": (
+    <Image
+      src="/net.png"
+      alt="React Native"
+      width={16}
+      height={16}
+      className="brightness-50 invert-0 filter"
+    />
+  ),
 };
 
 const Projects = () => {
@@ -134,10 +200,10 @@ const Projects = () => {
         infrastructure, and DevOps.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 gap-y-30 md:grid-cols-2">
+      <div className="mt-10 grid grid-cols-1 gap-y-36 md:grid-cols-2">
         {projects.map((project, index) => (
           <PinContainer key={index} title={project.title} href={project.href}>
-            <div className="flex h-[24rem] w-[22rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2">
+            <div className="flex h-[25rem] w-[22rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2">
               <Image
                 src={project.src}
                 alt={project.title}
