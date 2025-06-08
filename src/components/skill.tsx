@@ -39,10 +39,10 @@ const Skill = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex items-center gap-2 rounded-md px-2 py-1 text-black dark:text-white"
+            className="flex items-center md:gap-2 gap-2 rounded-md md:px-2 py-1 text-black dark:text-white"
           >
             {techIcons[skill] || null}
-            <span>{skill}</span>
+            <span className="text-sm md:text-xl">{skill}</span>
           </div>
         ))}
       </div>

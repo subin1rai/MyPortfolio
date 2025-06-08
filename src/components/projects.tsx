@@ -173,10 +173,7 @@ const Projects = () => {
       technologies: [
         "Next.js",
         "TypeScript",
-        "Tailwind CSS",
-        "Prisma",
-        "Node.js",
-        "Express.js",
+        "Tailwind CSS"
       ],
     },
     {
