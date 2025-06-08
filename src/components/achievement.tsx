@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
@@ -136,7 +135,7 @@ export function Achievement() {
             onClick={() => setActive(card)}
             className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col md:flex-row ">
+            <div className="flex gap-4 flex-col md:flex-row md:items-start items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
