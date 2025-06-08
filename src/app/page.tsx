@@ -33,7 +33,10 @@ export default function Home() {
           </div>
          <Flashcard/>
         </div>
+        <div >
+
         <Experience/>
+        </div>
         <Projects />
         <Footer/>
         <TextHover/>

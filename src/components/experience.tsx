@@ -18,57 +18,39 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState<"work" | "studies">("work");
 
   const workExperience: ExperienceItem[] = [
+    
     {
       id: "1",
-      period: "Jan 2023 - Present",
-      company: "Digital Perspective",
-      position: "Frontend Web Developer",
-      description: "Web Design; Web Development; Wordpress + Elementor.",
-      logo: "/next.svg",
-      logoAlt: "Digital Perspective Logo",
-    },
-    {
-      id: "2",
-      period: "Jan 2020 - Mar 2020",
-      company: "Bitcliq",
-      position: "Software Developer - Internship",
+      period: "Jun 2024 - Sep 2024",
+      company: "Itahari International College",
+      position: "Teaching Assistant & FullStack Development - Internship",
       description:
         "Mobile Development ( Parque D.Carlos I App - Course Final Project [Grade:20/20] ); Web Development; Functional testing some company's apps (Lota Digital, Caldas da Rainha - City Guide).",
-      logo: "/placeholder.svg?height=60&width=60",
-      logoAlt: "Bitcliq Logo",
-    },
-    {
-      id: "3",
-      period: "Apr 2019 - Jul 2019",
-      company: "Bitcliq",
-      position: "Software Developer - Internship",
-      description:
-        "Web Development; Functional testing some company's apps (Lota Digital, Caldas da Rainha - City Guide).",
-      logo: "/placeholder.svg?height=60&width=60",
-      logoAlt: "Bitcliq Logo",
-    },
+      logo: "/iic.png",
+      logoAlt: "iic Logo",
+    }
   ];
 
   const studiesExperience: ExperienceItem[] = [
     {
       id: "1",
-      period: "2018 - 2021",
-      company: "University of Technology",
-      position: "Bachelor in Computer Science",
+      period: "2023 - 2025",
+      company: "Itahari International College",
+      position: "BSc (Hons) in Computing",
       description:
         "Focused on software development, web technologies, and mobile application development.",
-      logo: "/me.png",
+      logo: "/iic.png",
       logoAlt: "University Logo",
     },
     {
       id: "2",
-      period: "2016 - 2018",
-      company: "Technical Institute",
-      position: "Web Development Certificate",
+      period: "2021 - 2022",
+      company: "Aims Academy College",
+      position: "School Leaving Certificate (SLC)",
       description:
-        "Comprehensive program covering HTML, CSS, JavaScript, and modern web frameworks.",
-      logo: "/placeholder.svg?height=60&width=60",
-      logoAlt: "Institute Logo",
+        "",
+      logo: "/aims.png",
+      logoAlt: "Aims Logo",
     },
   ];
 
@@ -76,7 +58,7 @@ const Experience = () => {
     activeTab === "work" ? workExperience : studiesExperience;
 
   return (
-    <Container className="min-h-screen p-8 text-white dark:bg-black">
+    <Container className="  text-white pt-36 dark:bg-black">
       <div className="mx-auto max-w-6xl">
         {/* Title */}
         <h1 className="text-primary text-3xl font-bold dark:text-white">
@@ -113,7 +95,7 @@ const Experience = () => {
             {currentExperience.map((item, index) => (
               <div
                 key={item.id}
-                className="mb-12 flex flex-col items-start gap-6 last:mb-0 md:flex-row"
+                className="mb-5 flex flex-col items-start md:gap-6 gap-4 last:mb-0 md:flex-row"
               >
                 {/* Timeline Line and Avatar */}
                 <div className="flex flex-row items-center md:flex-col">
@@ -121,8 +103,8 @@ const Experience = () => {
                     <Image
                       src={item.logo}
                       alt={item.logoAlt}
-                      width={40}
-                      height={40}
+                      width={30}
+                      height={30}
                       className="object-contain"
                     />
                   </div>
@@ -133,17 +115,18 @@ const Experience = () => {
                 </div>
 
                 {/* Experience Content */}
-                <div className="flex-1 pt-2">
+                <div className="flex-1 pt-0 md:pt-2">
                   <div className="text-secondary mb-2 text-sm">
                     {item.period}
                   </div>
                   <h3 className="mb-1 text-lg font-semibold text-black md:text-2xl dark:text-white">
                     {item.company}
                   </h3>
-                  <div className="mb-4 text-lg text-gray-300">
+                  <div className="text-md text-secondary mb-4 md:text-lg">
                     {item.position}
                   </div>
-                  <p className="leading-relaxed text-gray-300">
+
+                  <p className="text-secondary  leading-relaxed">
                     {item.description}
                   </p>
                 </div>

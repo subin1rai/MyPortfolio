@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { motion } from "motion/react";
-
+import { PinContainer } from "./ui/3d-pin";
 import Link from "next/link";
 
 const Projects = () => {
@@ -11,60 +10,60 @@ const Projects = () => {
       title: "OnSite App",
       description:
         "A mobile-first application designed to streamline fieldwork reporting and attendance tracking for on-site employees.",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/macbook-scroll.png",
+      src: "/onsite.png",
       href: "#",
     },
     {
       title: "IIC Resource Management",
       description:
         "A web-based resource management system developed for Itahari International College to handle equipment requests, inventory control, and billing.",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
+      src: "/iicresource.png",
       href: "https://www.booklett.com",
     },
     {
       title: "BookLett",
       description:
         "An online book-sharing platform that allows users to lend, borrow, and review books within a community.",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/colourful-text.webp",
+      src: "/book.png",
       href: "https://www.subinrai.com.np",
     },
   ];
 
   return (
     <div className="py-40">
-      <h1 className="text-primary dark:text-white text-3xl font-bold">Project</h1>
-      <p className="text-secondary dark:text-neutral-100 pt-4 text-sm md:text-sm">
+      <h1 className="text-primary text-3xl font-bold dark:text-white">
+        Projects
+      </h1>
+      <p className="text-secondary pt-4 text-sm md:text-sm dark:text-neutral-100">
         Im a software engineer with a passion for building scalable and
-        efficient system. I specialize in backend development, cloud
+        efficient systems. I specialize in backend development, cloud
         infrastructure, and DevOps.
       </p>
-      <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-3">
+
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-14">
         {projects.map((project, index) => (
-          <motion.div
-            initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
-            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            transition={{
-              duration: 0.3,
-              delay: index * 0.1,
-              ease: "easeInOut",
-            }}
-            key={project.title}
-            className="group"
+          <PinContainer
+            key={index}
+            title={project.title}
+            href={project.href}
           >
-            <Link href={project.href} className="block">
-            <Image
-              src={project.src}
-              alt={project.title}
-              width={300}
-              height={300}
-              className="h-72 w-full rounded-xl object-cover transition duration-200 group-hover:scale-[1.04]"
-            />
-            <h2 className="font-medium mt-2 tracking-tight z-20 text-neutral-500 dark:text-neutral-400 ">
-              {project.title}
-            </h2>
-            <p className="text-sm max-w-xs text-neutral-500 dark:text-neutral-400">{project.description}</p>
-        </Link>
-          </motion.div>
+            <div className="flex h-[20rem] w-[22rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2">
+              <Image
+                src={project.src}
+                alt={project.title}
+                width={300}
+                height={200}
+                className="h-40 w-full rounded-lg object-cover mb-3"
+              />
+              <h3 className="text-base font-bold text-slate-100">
+                {project.title}
+              </h3>
+              <p className="text-sm text-slate-400">
+                {project.description}
+              </p>
+              {/* <div className="mt-4 flex w-full flex-1 rounded-lg bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" /> */}
+            </div>
+          </PinContainer>
         ))}
       </div>
     </div>
