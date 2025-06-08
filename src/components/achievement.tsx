@@ -33,7 +33,7 @@ export function Achievement() {
   return (
     <>
       <h1 className="text-primary text-3xl font-bold dark:text-white pb-4">
-             Awards & Acheivements
+        Awards & Achievements
       </h1>
       <AnimatePresence>
         {active && typeof active === "object" && (
