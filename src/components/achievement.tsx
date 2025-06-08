@@ -128,7 +128,7 @@ export function Achievement() {
         ) : null}
       </AnimatePresence>
       <ul className="max-w-4xl mx-auto w-full gap-4 mb-12">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
