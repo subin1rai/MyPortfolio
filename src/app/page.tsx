@@ -5,11 +5,19 @@ import { Footer } from "@/components/footer";
 import Media from "@/components/media";
 import Projects from "@/components/projects";
 import { TextHover } from "@/components/textHover";
+import { Spotlight } from "@/components/ui/spotlight-new";
+
 import { MapPinIcon } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-start justify-start">
+    <div className="flex min-h-screen max-w-screen items-start justify-start">
+        {/* Spotlight with fixed positioning */}
+      <div className="fixed inset-0 w-screen h-screen pointer-events-none">
+        <div className="relative w-full h-full max-w-7xl mx-auto">
+          <Spotlight width={300}/>
+        </div>
+      </div>
       <Container className="min-h-screen px-10 pt-20 pb-10 md:pt-36 md:pb-10">
         <div className="flex flex-col md:flex-row md:justify-between justify-center items-center gap-10">
           <div>
