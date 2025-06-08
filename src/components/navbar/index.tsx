@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
+    { name: "Awards", href: "/awards" },
   ];
 
   const [scrolled, setScrolled] = useState<boolean>(false);

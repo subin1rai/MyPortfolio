@@ -46,7 +46,7 @@
 
 @dark{
   --color-primary: var(--color-white);
-  --color-secondary: var(--color-neutral-300);
+  --color-secondary: var(--color-neutral-400);
 }
 
 :root {
