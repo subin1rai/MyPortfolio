@@ -42,7 +42,7 @@ const Skill = () => {
             className="flex items-center md:gap-2 gap-2 rounded-md md:px-2 py-1 text-black dark:text-white"
           >
             {techIcons[skill] || null}
-            <span className="text-sm md:text-xl">{skill}</span>
+            <span className="text-sm md:text-lg">{skill}</span>
           </div>
         ))}
       </div>
