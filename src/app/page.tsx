@@ -1,3 +1,4 @@
+import { Achievement } from "@/components/achievement";
 import Container from "@/components/container";
 import Experience from "@/components/experience";
 import Flashcard from "@/components/flashcard";
@@ -14,7 +15,7 @@ export default function Home() {
     <div className="flex min-h-screen max-w-screen items-start justify-start">
         {/* Spotlight with fixed positioning */}
       <div className="fixed inset-0 w-screen h-screen pointer-events-none">
-        <div className="relative w-full h-full max-w-7xl mx-auto">
+        <div className="relative w-full h-full max-w-6xl mx-auto">
           <Spotlight width={300}/>
         </div>
       </div>
@@ -43,9 +44,10 @@ export default function Home() {
         </div>
         <div >
 
-        <Experience/>
         </div>
+        <Experience/>
         <Projects />
+        <Achievement/>
         <Footer/>
         <TextHover/>
       </Container>

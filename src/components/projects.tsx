@@ -75,6 +75,7 @@ const Projects = () => {
       technologies: [
         "React Native",
         "MySql",
+        "TypeScript",
         "Prisma",
         "Zustand",
         "Node.js",
@@ -90,6 +91,22 @@ const Projects = () => {
       technologies: [
         "React.js",
         "MySql",
+        "JavaScript",
+        "Tailwind CSS",
+        "Prisma",
+        "Node.js",
+        "Express.js",
+      ],
+    },
+    {
+      title: "Personal Portfolio",
+      description:
+        "A web-based resource management system developed for Itahari International College to handle equipment requests, inventory control, and billing.",
+      src: "/portfolio.png",
+      href: "https://www.subinrai.com.np",
+      technologies: [
+        "Next.js",
+        "TypeScript",
         "Tailwind CSS",
         "Prisma",
         "Node.js",
@@ -101,7 +118,7 @@ const Projects = () => {
       description:
         "An online book-sharing platform that allows users to lend, borrow, and review books within a community.",
       src: "/book.png",
-      href: "https://www.subinrai.com.np",
+      href: "https://booklett.netlify.app/p",
       technologies: ["React.js", "PostgreSQL", "Tailwind CSS", "ASP.NET"],
     },
   ];

@@ -58,7 +58,7 @@ const Experience = () => {
     activeTab === "work" ? workExperience : studiesExperience;
 
   return (
-    <Container className="  text-white pt-36 dark:bg-black">
+    <Container className="  text-white md:pt-44 pt-36  dark:bg-black">
       <div className="mx-auto max-w-6xl">
         {/* Title */}
         <h1 className="text-primary text-3xl font-bold dark:text-white">
