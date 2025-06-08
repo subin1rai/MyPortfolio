@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import type React from "react";
 import { PinContainer } from "./ui/3d-pin";
 import { motion } from "framer-motion"; // ✅ Correct import
+import { Github } from "lucide-react";
 
 // Optional: add logo image fallback
 const techIcons: Record<string, React.ReactNode> = {
@@ -24,24 +25,8 @@ const techIcons: Record<string, React.ReactNode> = {
       className="brightness-0 invert-0 filter"
     />
   ),
-  "JavaScript": (
-    <Image
-      src="/js.png"
-      alt="React Native"
-      width={16}
-      height={16}
-     
-    />
-  ),
-  "TypeScript": (
-    <Image
-    src="/ts.png"
-      alt="TypeScript"
-      width={16}
-      height={16}
-     
-    />
-  ),
+  JavaScript: <Image src="/js.png" alt="React Native" width={16} height={16} />,
+  TypeScript: <Image src="/ts.png" alt="TypeScript" width={16} height={16} />,
   "Tailwind CSS": (
     <Image
       src="/tailwind.png"
@@ -137,7 +122,8 @@ const Projects = () => {
       description:
         "A mobile-first application designed to streamline fieldwork reporting and attendance tracking for on-site employees.",
       src: "/onsite.png",
-      href: "#",
+      href: "https://www.booklett.com",
+      github: "https://github.com/subin1rai/OnSite-APP-Final-Year-Project.git",
       technologies: [
         "React Native",
         "MySql",
@@ -151,9 +137,10 @@ const Projects = () => {
     {
       title: "IIC Resource Management",
       description:
-        "A web-based resource management system developed for Itahari International College to handle equipment requests, inventory control, and billing.",
+        "A web-based resource management system developed for Itahari International College to handle equipment, inventory control, and billing.",
       src: "/iicresource.png",
       href: "https://www.booklett.com",
+      github: "https://github.com/subin1rai/IIC-Resource-Frontend.git",
       technologies: [
         "React.js",
         "MySql",
@@ -170,18 +157,16 @@ const Projects = () => {
         "A web-based resource management system developed for Itahari International College to handle equipment requests, inventory control, and billing.",
       src: "/portfolio.png",
       href: "https://www.subinrai.com.np",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS"
-      ],
+      github: "https://github.com/subin1rai/MyPortfolio.git",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
       title: "BookLett",
       description:
         "An online book-sharing platform that allows users to lend, borrow, and review books within a community.",
       src: "/book.png",
-      href: "https://booklett.netlify.app/p",
+      href: "https://booklett.netlify.app",
+      github: "https://github.com/subin1rai/BookLett.git",
       technologies: ["React.js", "PostgreSQL", "Tailwind CSS", "ASP.NET"],
     },
   ];
@@ -197,36 +182,77 @@ const Projects = () => {
         infrastructure, and DevOps.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 gap-y-36 md:grid-cols-2">
+      <div className="mt-10 grid grid-cols-1 gap-y-44 md:grid-cols-2">
         {projects.map((project, index) => (
-          <PinContainer key={index} title={project.title} href={project.href}>
-            <div className="flex h-[25rem] w-[22rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2">
-              <Image
-                src={project.src}
-                alt={project.title}
-                width={300}
-                height={200}
-                className="mb-3 h-40 w-full rounded-lg object-cover"
-              />
-              <h3 className="text-base font-bold text-slate-100">
-                {project.title}
-              </h3>
-              <p className="text-sm text-slate-400">{project.description}</p>
+        <PinContainer key={index} title={project.href} href={project.href}>
+  <div className="flex h-[28rem] w-[22rem] basis-full flex-col justify-between p-4 tracking-tight text-slate-100/50 sm:basis-1/2">
+    <div>
+      <Image
+        src={project.src || "/placeholder.svg"}
+        alt={project.title}
+        width={300}
+        height={200}
+        className="mb-3 h-40 w-full rounded-lg object-cover"
+      />
+      <h3 className="text-base font-bold text-slate-100">
+        {project.title}
+      </h3>
+      <p className="text-sm text-slate-400">{project.description}</p>
 
-              <div className="mt-3 flex flex-wrap gap-2">
-                {project.technologies.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.5 }}
-                    className="flex items-center gap-1 rounded-2xl border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 shadow-sm"
-                  >
-                    {techIcons[tech]}
-                    <span>{tech}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </PinContainer>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {project.technologies.map((tech, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.5 }}
+            className="flex items-center gap-1 rounded-2xl border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 shadow-sm"
+          >
+            {techIcons[tech]}
+            <span>{tech}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+
+    {/* Buttons moved to the bottom */}
+    <div className="mt-6 flex gap-3">
+      <motion.a
+        whileHover={{ scale: 1.2 }}
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-all duration-200 hover:border-slate-400 hover:bg-slate-50 hover:shadow-md active:scale-95"
+      >
+        <Github className="h-4 w-4 transition-transform duration-200 group-hover:scale-110" />
+        <span>View Code</span>
+      </motion.a>
+
+      {project.href !== "#" && (
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-slate-800 hover:shadow-md active:scale-95"
+        >
+          <span>Live Demo</span>
+          <svg
+            className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        </a>
+      )}
+    </div>
+  </div>
+</PinContainer>
+
         ))}
       </div>
     </div>
