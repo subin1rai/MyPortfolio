@@ -17,7 +17,7 @@ export default function Home() {
       {/* Spotlight with fixed positioning */}
       <div className="pointer-events-none fixed inset-0 h-screen w-screen">
         <div className="relative mx-auto h-full w-full max-w-6xl">
-          <Spotlight width={300} />
+          <Spotlight width={560} />
         </div>
       </div>
       <Container className="min-h-screen px-10 pt-20 pb-10 md:pt-36 md:pb-10">

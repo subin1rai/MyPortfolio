@@ -162,7 +162,7 @@ export function Achievement() {
             </div>
             <motion.button
               layoutId={`button-${card.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
+              className="px-4 py-2 text-sm rounded-full font-bold dark:bg-gray-100 bg-black hover:bg-green-500 hover:text-white dark:text-black text-white mt-4 md:mt-0"
             >
               {card.ctaText}
             </motion.button>
@@ -254,4 +254,36 @@ const cards = [
 
     },
   },
+{
+  title: "Delta 4.0 National Level Technical Festival: Software Hackathon 2023",
+  description: `Tribhuvan University, Purwanchal Campus`,
+  src: "/delta.png", // Replace with actual image if available
+  ctaText: "View",
+  ctaLink: "https://drive.google.com/file/d/1newEjaw8mslogawQHDuNtK6X9vGVJvcS/view?usp=sharing",
+  content: () => {
+    return (
+      <p>
+       Recognized for creating an innovative and impactful project, showcasing exceptional technical proficiency and effective
+collaboration
+      </p>
+    );
+
+    },
+  },
+ {
+    title: "Creative Clash: Volunteer",
+    description: `Itahari International College`,
+    src: "/creative.jpg", // Replace with actual image if available
+    ctaText: "View",
+    ctaLink: "https://drive.google.com/file/d/1JML5f_K0gB_Gl6GjVfhIZNwPGB_x_1IW/view?usp=sharing",
+    content: () => {
+      return (
+        <p>
+          Volunteered at <strong>Creative Clash</strong>, a multi creative event featuring UI/UX design, DSA problem-solving, 
+          and web development competitions. Mentored junior participants, supported event coordination, and shared personal experiences 
+          to inspire fellow students. Gained valuable exposure to peer mentorship, community engagement, and event management.
+        </p>
+      );
+    },
+  }
 ];

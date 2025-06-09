@@ -139,7 +139,7 @@ const Projects = () => {
       description:
         "A web-based resource management system developed for Itahari International College to handle equipment, inventory control, and billing.",
       src: "/iicresource.png",
-      href: "https://www.booklett.com",
+      href: "Private Website",
       github: "https://github.com/subin1rai/IIC-Resource-Frontend.git",
       technologies: [
         "React.js",
