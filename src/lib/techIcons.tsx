@@ -24,6 +24,17 @@ const techIcons: Record<string, React.ReactNode> = {
       />
     </div>
   ),
+  "AWS": (
+    <div className="h-[15px] w-[15px] md:h-[30px] md:w-[30px] align-center">
+      <Image
+        src="/AWS.png"
+        alt="React Native"
+        width={30}
+        height={30}
+        className="h-full w-full object-contain"
+      />
+    </div>
+  ),
   JavaScript: (
     <div className="h-[15px] w-[15px] md:h-[30px] md:w-[30px]">
       <Image
