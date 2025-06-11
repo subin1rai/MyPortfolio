@@ -65,7 +65,7 @@ const techIcons: Record<string, React.ReactNode> = {
       className="brightness-0 invert-0 filter"
     />
   ),
-  "AWS": (
+  AWS: (
     <Image
       src="/AWS.png"
       alt="AWS"
@@ -74,7 +74,7 @@ const techIcons: Record<string, React.ReactNode> = {
       className="brightness-0 invert-0 filter"
     />
   ),
-  "Mongodb": (
+  Mongodb: (
     <Image
       src="/mongo.png"
       alt="mongo"
@@ -185,9 +185,15 @@ const Projects = () => {
       src: "/book.png",
       href: "https://booklett.netlify.app",
       github: "https://github.com/subin1rai/BookLett.git",
-      technologies: ["React.js", "PostgreSQL", "Tailwind CSS", "ASP.NET"],
+      technologies: [
+        "React.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "ASP.NET",
+        "JavaScript",
+      ],
     },
-   
+
     {
       title: "URL-Shortner",
       description:
@@ -195,7 +201,14 @@ const Projects = () => {
       src: "/url.png",
       href: "https://urlsy.vercel.app",
       github: "https://github.com/subin1rai/urlshortner.git",
-      technologies: ["React.js", "Mongodb", "Tailwind CSS", "Node.js","AWS"],
+      technologies: [
+        "React.js",
+        "Mongodb",
+        "Tailwind CSS",
+        "Node.js",
+        "AWS",
+        "JavaScript",
+      ],
     },
   ];
 
