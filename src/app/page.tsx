@@ -1,5 +1,5 @@
 import { Achievement } from "@/components/achievement";
-import Connect from "@/components/connect";
+// import Connect from "@/components/connect";
 import Container from "@/components/container";
 import Experience from "@/components/experience";
 import Flashcard from "@/components/flashcard";
