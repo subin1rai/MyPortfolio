@@ -5,6 +5,7 @@ import techIcons from "@/lib/techIcons";
 const Skill = () => {
   const skills = [
     "React Native",
+    "ASP.NET",
     "Node.js",
     "Express.js",
     "JavaScript",
@@ -17,7 +18,6 @@ const Skill = () => {
     "Tailwind CSS",
     "Next.js",
     "PostgreSQL",
-    "ASP.NET",
     "MongoDB",
     "Firebase",
     "Git",

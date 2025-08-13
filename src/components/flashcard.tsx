@@ -12,7 +12,7 @@ const Flashcard = () => {
         <div className="flex flex-col items-center  space-y-4">
           <div className="rounded-xl bg-[#f4f4f5] p-6 dark:bg-[#27272a]">
               <Image
-                src="/reactnative.png"
+                src="/net.png"
                 alt="React Native"
                 className="h-10 w-10"
                 height={60}

@@ -1,4 +1,5 @@
 import { Achievement } from "@/components/achievement";
+import Connect from "@/components/connect";
 import Container from "@/components/container";
 import Experience from "@/components/experience";
 import Flashcard from "@/components/flashcard";
@@ -61,6 +62,7 @@ export default function Home() {
         <div id="awards">
           <Achievement />
         </div>
+        {/* <Connect/> */}
         <Footer />
         <TextHover />
       </Container>

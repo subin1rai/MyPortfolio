@@ -208,9 +208,35 @@ export const CloseIcon = () => {
 
 const cards = [
 {
+  title: "AAA Scholarship Award",
+  description: `Itahari International College`,
+  src: "/AAA.png", 
+  ctaText: "View",
+  ctaLink: "https://drive.google.com/file/d/1Eu7moGJntyaSF-rGpML7rjcCo0VIEvK2/view?usp=sharing",
+  content: () => {
+    return (
+      <p>
+        In 2025, I was honored to receive the prestigious{" "}
+        <strong>AAA Scholarship</strong> from{" "}
+        <strong>Itahari International College</strong>, recognizing outstanding{" "}
+        <strong>Academic Performance</strong>,{" "}
+        <strong>Attendance</strong>, and <strong>Attitude</strong>.
+        <br />
+        <br />
+        This recognition reflects my consistent dedication to learning,
+        personal growth, and academic excellence. It serves as a powerful
+        motivation to keep pushing boundaries, embracing challenges, and
+        making the most of every opportunity to grow both academically and
+        personally.
+      </p>
+    );
+  },
+},
+
+{
   title: "1st Position - UI/UX Design Competition",
   description: `ACES Society at IOE Pulchowk Campus`,
-  src: "/UIUX.png", // You can replace this with the actual certificate or photo if needed
+  src: "/UIUX.png",
   ctaText: "View",
   ctaLink: "https://drive.google.com/file/d/1pOWoPX_mLor9BgVZKxPDRC-zSdh2mVLA/view?usp=sharing",
   content: () => {
@@ -230,7 +256,6 @@ const cards = [
     );
   },
 },
-
 {
   title: "Best Idea Winner - IIC QUEST: Hackathon",
   description: `Itahari International College`,
