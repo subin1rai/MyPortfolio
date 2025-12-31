@@ -208,11 +208,11 @@ export const CloseIcon = () => {
 
 const cards = [
 {
-  title: "AAA Scholarship Award",
-  description: `Itahari International College`,
-  src: "/AAA.png", 
+  title: "Best Final Year Project Award",
+  description: `London Metropolitan University`,
+  src: "/fyp.jpeg", 
   ctaText: "View",
-  ctaLink: "https://drive.google.com/file/d/1Eu7moGJntyaSF-rGpML7rjcCo0VIEvK2/view?usp=sharing",
+  ctaLink: "https://drive.google.com/file/d/1Cyvgn4aqnEMmB0Bfz8t1hux4hzHJpFCt/view?usp=sharing",
   content: () => {
     return (
       <p>
@@ -231,6 +231,29 @@ const cards = [
       </p>
     );
   },
+},{
+  title: "AAA Scholarship Award",
+  description: `Itahari International College`,
+  src: "/AAA.png", 
+  ctaText: "View",
+  ctaLink: "https://drive.google.com/file/d/1Eu7moGJntyaSF-rGpML7rjcCo0VIEvK2/view?usp=sharing",
+  content: () => {
+  return (
+    <p>
+      In 2025, I was awarded the <strong>Best Final Year Project Award</strong> by{" "}
+      <strong>London Metropolitan University</strong> in recognition of the
+      quality, innovation, and technical depth of my final-year project.
+      <br />
+      <br />
+      This project demonstrated strong problem-solving skills, independent
+      research, and practical application of academic knowledge to real-world
+      challenges. Receiving this award reflects my commitment to excellence,
+      creativity, and delivering impactful solutions through technology and
+      research.
+    </p>
+  );
+},
+
 },
 
 {
