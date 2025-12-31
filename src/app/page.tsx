@@ -57,7 +57,7 @@ export default function Home() {
         </div>
         <Skill />
         <div id="projects" className="scroll-mt-24">
-          <Projects />
+          <Projects/>
         </div>
         <div id="awards">
           <Achievement />

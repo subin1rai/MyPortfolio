@@ -293,7 +293,7 @@ const Projects = () => {
               </div>
             </div>
           </PinContainer>
-        ))}
+        ))} 
       </div>
     </div>
   );
