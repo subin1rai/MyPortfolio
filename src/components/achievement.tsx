@@ -232,7 +232,7 @@ const cards = [
     );
   },
 },{
-  title: "AAA Scholarship Award x2",
+  title: "AAA Scholarship Award x 2",
   description: `Itahari International College`,
   src: "/AAA.png", 
   ctaText: "View",
